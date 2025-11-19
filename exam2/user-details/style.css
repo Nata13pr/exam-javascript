@@ -1,17 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     height: 100%;
+    width: 100vw;
 }
-.mainDiv{
+
+.mainDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.showPostButton{
+
+.showPostButton {
     width: 90%;
+    margin-top: 30px;
+}
+
+.postsTitleDiv{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.listOfPostTitles {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:2rem;
+}
+
+.details{
+    padding: 5px 15px;
+}
+
+.postTitleLi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: lightblue;
 }
