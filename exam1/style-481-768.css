@@ -1,0 +1,12 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    div > .listWithButtons {
+        margin-top: 1em;
+        gap: 20px
+    }
+
+    div > .buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+}

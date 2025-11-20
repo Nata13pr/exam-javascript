@@ -51,7 +51,6 @@ buttonDeleteList.addEventListener('click', (e) => {
     e.preventDefault();
     ul.innerText = '';
     array = [];
-    console.log(array);
 })
 
 
