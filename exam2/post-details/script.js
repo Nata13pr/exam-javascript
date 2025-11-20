@@ -47,22 +47,10 @@ const createComments = (comments) => {
     }
 }
 
-// fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
-//     .then(res => res.json())
-//     .then(comments => createComments(comments));
-let array = [
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1},
-    {body: 'sgsdfsfs', email: 'sdfsdsds', id: 'sdfsfsfs', name: 'sdsdfsdfsdfs', postId: 1}
-]
-createComments(array)
-console.log('ffffffffffffffffff')
+fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
+    .then(res => res.json())
+    .then(comments => createComments(comments));
+
+
 mainDiv.append(h1, pBody, pId, p,h2, commentsDiv);
 document.body.appendChild(mainDiv);

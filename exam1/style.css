@@ -63,3 +63,9 @@ ul {
 #deleteButton {
     margin-top: 10px;
 }
+
+.paper-1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}

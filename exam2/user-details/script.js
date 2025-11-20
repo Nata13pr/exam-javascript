@@ -1,5 +1,6 @@
 let mainDiv = document.createElement('div');
 mainDiv.classList.add('mainDiv');
+
 let user = JSON.parse(localStorage.getItem('user')) || {};
 const {address, company, email, id, name, phone, username, website} = user;
 
@@ -18,11 +19,13 @@ pId.innerText = `Id - ${id}`;
 let pAddress = document.createElement("p");
 pAddress.innerText = `Address details:`;
 let addressUl = document.createElement("ul");
+
 for (let key in address) {
     if (typeof address[key] === "object" && !Array.isArray(address[key]) && address[key] !== null) {
         let mainLi = document.createElement("li");
         mainLi.innerText = `${key}`;
         let ul = document.createElement("ul");
+
         for (let keyForAddress in address[key]) {
             let li = document.createElement("li");
             li.innerText = `${keyForAddress} - ${address[key][keyForAddress]}`;
@@ -40,11 +43,13 @@ for (let key in address) {
 let pCompany = document.createElement("p");
 pCompany.innerText = `Company details:`;
 let ulCompany = document.createElement("ul");
+
 for (let key in company) {
     let li = document.createElement("li");
     li.innerText = `${key} - ${company[key]}`;
     ulCompany.appendChild(li);
 }
+
 let buttonToShowPost = document.createElement("button");
 buttonToShowPost.classList.add("showPostButton");
 buttonToShowPost.innerText = "post of current user";
@@ -76,7 +81,6 @@ const createPostsTitleList = (posts) => {
             })
             li.append(h2, p,button)
             listOfPostTitles.appendChild(li);
-
         })
         divWithPostsTitles.appendChild(listOfPostTitles);
     }
@@ -84,24 +88,10 @@ const createPostsTitleList = (posts) => {
 
 buttonToShowPost.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("clicked");
-    createPostsTitleList(array)
-    // fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
-    //     .then(res => res.json())
-    //     .then(posts => createPostsTitleList(posts));
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+        .then(res => res.json())
+        .then(posts => createPostsTitleList(posts));
 })
 
 mainDiv.append(h1, pName, pEmail, pEmail, pWebsite, pId, pAddress, addressUl, pCompany, ulCompany, buttonToShowPost,divWithPostsTitles);
 document.body.appendChild(mainDiv);
-const array=[
-    {title:'lorem7'},
-    {title:'loremdcsdfs'},
-    {title:'loremdcsdfs'},
-    {title:'loremdcsdfs'},
-    {title:'loremtyututdcsdfs'},
-    {title:'loremdjghjgjgcsdfs'},
-    {title:'loremdcsjfjfjdfs'},
-    {title:'loremdcfhjfjfsdfs'},
-    {title:'loremdcfhjfjsdfs'},
-    {title:'lorefhfhfmdcsdfs'}
-]

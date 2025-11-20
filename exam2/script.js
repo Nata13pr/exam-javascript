@@ -1,4 +1,4 @@
-let mainDiv=document.getElementById("mainDiv");
+let mainDiv = document.getElementById("mainDiv");
 const listOfUsersElement = document.createElement('ul');
 listOfUsersElement.classList.add('listOfUsers');
 
@@ -19,7 +19,7 @@ const createUserFunction = (users) => {
         let button = document.createElement("button");
         button.innerText = 'Деталі';
         button.addEventListener("click", () => {
-            window.location.href ='user-details/user-details.html'
+            window.location.href = 'user-details/user-details.html'
             localStorage.setItem('user', JSON.stringify(user));
         })
         li.append(h1, p, button);
