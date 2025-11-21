@@ -8,6 +8,29 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .container .form {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .container .form > .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container .form > .input-group > input[name='nameValue'] {
+        width: 100%;
+    }
+
+    .container .form > input[type='submit'] {
+        width: 9%;
+    }
+
     div .listWithButtons {
         flex-direction: column-reverse;
         gap: 10px;
@@ -33,7 +56,7 @@
     }
 
     .listWithButtons #listOfNamesAndValues {
-        height:385px;
+        height: 385px;
     }
 
 }

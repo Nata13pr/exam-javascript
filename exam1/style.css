@@ -13,6 +13,7 @@ body {
     background-color: white;
     margin: 60px auto 20px auto;
     padding: 60px 50px;
+    border-radius: 5px;
 }
 
 .form {
@@ -25,7 +26,7 @@ body {
     display: block;
 }
 
-.form > .input-group> input[name='nameValue'] {
+.form > .input-group > input[name='nameValue'] {
     margin-top: 3px;
     width: 60vw;
     height: 25px;
@@ -44,13 +45,12 @@ body {
     font-weight: normal;
 }
 
-
-
 .listWithButtons {
     display: flex;
     gap: 3em;
 }
-#listOfNamesAndValues{
+
+#listOfNamesAndValues {
     width: 60vw;
     overflow: auto;
     list-style: none;
@@ -58,19 +58,19 @@ body {
     height: 350px;
 }
 
-
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
 }
-.buttons  button {
+
+.buttons button {
     padding: 0 7px;
     height: 25px;
-
 }
-.button-to-sort{
+
+.button-to-sort {
     display: flex;
     flex-direction: column;
     gap: 10px;
