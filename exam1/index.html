@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="rest.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-481-768.css">
     <link rel="stylesheet" href="style-0-480.css">
 </head>
 <body>
 <div class="wrapper">
-    <h1>Test</h1>
-    <form>
-        <label for="nameValue">Name/Value Pair</label>
-        <input type="text" placeholder="Name=value" name="nameValue" id="nameValue">
-        <input type="submit" value="Add" name="value">
-    </form>
-    <h2>Name/Value Pair List</h2>
-    <div class="listWithButtons">
-        <ul id="listOfNamesAndValues">
-        </ul>
-
-        <div class="buttons">
-            <button id="sortByNameButton">Sort by Name</button>
-            <button id="sortByValueButton">Sort by Value</button>
-            <button id="deleteButton">Delete</button>
+    <div class="container">
+        <h1 class="title">Test</h1>
+        <form class="form">
+            <div class="input-group">
+                <label for="nameValue">Name/Value Pair</label>
+                <input type="text" placeholder="Name=value" name="nameValue" id="nameValue">
+            </div>
+            <input type="submit" value="Add" name="value">
+        </form>
+        <h2 class="title-for-list">Name/Value Pair List</h2>
+        <div class="listWithButtons">
+            <ul id="listOfNamesAndValues">
+            </ul>
+            <div class="buttons">
+                <div class="button-to-sort">
+                    <button id="sortByNameButton">Sort by Name</button>
+                    <button id="sortByValueButton">Sort by Value</button>
+                </div>
+                <button id="deleteButton">Delete</button>
+            </div>
         </div>
     </div>
 </div>

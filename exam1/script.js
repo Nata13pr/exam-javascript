@@ -18,7 +18,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let nameValue = form.nameValue.value.trim();
 
-    const regExp = /^[a-zA-Z0-9]+[ \W]+[a-zA-Z0-9]+$/g
+    const regExp = /^([a-zA-Z0-9]+)([ \W])([a-zA-Z0-9]+)$/;
 
     const match = nameValue.match(regExp)
 

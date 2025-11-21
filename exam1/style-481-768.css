@@ -1,12 +1,39 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
-    div > .listWithButtons {
-        margin-top: 1em;
-        gap: 20px
+
+    div.container {
+        background-color: white;
+        margin: 30px auto 10px auto;
+        padding: 40px 30px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div .listWithButtons {
+        flex-direction: column-reverse;
+        gap: 10px;
     }
 
-    div > .buttons {
+    .buttons {
+        display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .button-to-sort {
+        flex-direction: row;
+    }
+
+    #sortByNameButton,
+    #sortByValueButton,
+    #deleteButton {
+        width: auto
+    }
+
+    .listWithButtons #listOfNamesAndValues {
+        height:385px;
     }
 
 }
