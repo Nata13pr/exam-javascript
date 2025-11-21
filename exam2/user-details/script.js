@@ -53,7 +53,7 @@ for (let key in company) {
 let buttonToShowPost = document.createElement("button");
 buttonToShowPost.classList.add("showPostButton");
 buttonToShowPost.innerText = "post of current user";
-let divWithPostsTitles=document.createElement('div');
+let divWithPostsTitles = document.createElement('div');
 divWithPostsTitles.classList.add("postsTitleDiv");
 
 const createPostsTitleList = (posts) => {
@@ -79,7 +79,7 @@ const createPostsTitleList = (posts) => {
 
                 localStorage.setItem('post', JSON.stringify(post));
             })
-            li.append(h2, p,button)
+            li.append(h2, p, button)
             listOfPostTitles.appendChild(li);
         })
         divWithPostsTitles.appendChild(listOfPostTitles);
@@ -93,5 +93,5 @@ buttonToShowPost.addEventListener("click", (e) => {
         .then(posts => createPostsTitleList(posts));
 })
 
-mainDiv.append(h1, pName, pEmail, pEmail, pWebsite, pId, pAddress, addressUl, pCompany, ulCompany, buttonToShowPost,divWithPostsTitles);
+mainDiv.append(h1, pName, pEmail, pEmail, pWebsite, pId, pAddress, addressUl, pCompany, ulCompany, buttonToShowPost, divWithPostsTitles);
 document.body.appendChild(mainDiv);

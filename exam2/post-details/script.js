@@ -17,15 +17,13 @@ let commentsDiv = document.createElement('div');
 commentsDiv.classList.add('commentsDiv');
 
 const createComments = (comments) => {
-    console.log(comments);
+
     if (!Array.isArray(comments)) {
         throw new Error('Comments must be an array');
     } else {
-
         let ulComments = document.createElement('ul');
         ulComments.classList.add('commentsUl');
         comments.forEach((comment) => {
-
             const {body, email, id, name, postId} = comment;
             let li = document.createElement('li');
             li.classList.add('commentLi');
@@ -42,8 +40,7 @@ const createComments = (comments) => {
             li.append(h3, pBodyComment, pEmail, pId, p);
             ulComments.append(li);
         })
-        commentsDiv.appendChild( ulComments)
-        // mainDiv.append(commentsDiv)
+        commentsDiv.appendChild(ulComments)
     }
 }
 
@@ -51,6 +48,5 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
     .then(res => res.json())
     .then(comments => createComments(comments));
 
-
-mainDiv.append(h1, pBody, pId, p,h2, commentsDiv);
+mainDiv.append(h1, pBody, pId, p, h2, commentsDiv);
 document.body.appendChild(mainDiv);
